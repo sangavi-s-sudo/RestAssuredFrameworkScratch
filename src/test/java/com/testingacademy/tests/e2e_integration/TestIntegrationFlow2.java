@@ -2,7 +2,6 @@ package com.testingacademy.tests.e2e_integration;
 
 import com.testingacademy.base.BaseTest;
 import com.testingacademy.endpoints.APIConstants;
-import com.testingacademy.pojos.request.Booking;
 import com.testingacademy.pojos.response.BookingResponse;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
@@ -116,7 +115,6 @@ public class TestIntegrationFlow2 extends BaseTest {
     @Owner("Sangavi")
     @Description("TC#INT1 - Step 3. Verify that the Booking By deleted ID")
     public void testVerifyAllBookingId(ITestContext iTestContext) {
-        Integer bookingid = (Integer) iTestContext.getAttribute("bookingid");
 
         String basePathGET = APIConstants.CREATE_UPDATE_BOOKING_URL ;
         requestSpecification.basePath(basePathGET);
